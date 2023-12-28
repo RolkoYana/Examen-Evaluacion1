@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen</title>
+</head>
+<body>
+    <form action="http://jkorpela.fi/cgi-bin/echo.cgi" method="post">
+        <fieldset>
+            <legend>Formulario reserva vehiculo</legend>
+        <fieldset>
+            <legend>Datos personales</legend>
+            <p>
+                Primer apellido: <input typ="text" name="apellido1" max="15">
+            </p>
+            <p>
+                Segundo apellido: <input type="text" name="apellido2" max="15">
+            </p>
+            <p>
+                Nombre: <input type="text" name="nombre" max="15">
+            </p>
+            <p>
+                DNI: <input type="text" name="dni" maxlength="9">
+            </p>
+            <p>
+                Edad: <input type="number" name="edad" min="18" max="99">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Datos carnet</legend>
+            <p>
+                Fecha expedición: <input type="date" name="fechaExp">
+            </p>
+            <p>
+                Lugar expedición:
+                <select name="lugarExp">
+                    <option>UE</option>
+                    <option>NON UE</option>
+                </select>
+            </p>
+            <p>
+                Tipo carnet:&nbsp;
+                A: <input type="radio" name="tipo">&nbsp;
+                B: <input type="radio" name="tipo">
+                C o superior: <input type="radio" name="tipo">
+            </p>
+        </fieldset>
+        
+            <fieldset>
+                <legend>Datos vehiculo</legend>
+                <p>
+                    Fecha inicio: <input type="date" name="fechaIn">
+                </p>
+                <p>
+                Fecha final: <input type="date" name="fechaFin">
+                </p>
+                <P>
+                    Tipo vehiculo: 
+                    <input type="radio" name="vehiculo">Diesel&nbsp;
+                    <input type="radio" name="vehiculo">Gasolina&nbsp;
+                    <input type="radio" name="vehiculo">Hibrido&nbsp;
+                    <input type="radio" name="vehiculo">Eléctrico&nbsp;
+                </P>
+                <p>
+                    Coches: <br>
+                    <select name="coche" size="5">
+                        <optgroup label="Pequeño">
+                            <option>Seat Ibiza</option>
+                            <option>Fiat Cinquecento</option>
+                            <option>Audi A1</option>
+                        </optgroup>
+                        <optgroup label="Grande">
+                            <option>Wolfswagen Passat</option>
+                            <option>BMW Serie 5</option>
+                        </optgroup>
+                    </select>
+                </p>
+                <p>
+                    Extras: 
+                    <input type="checkbox" name="extra1">Sillita niño&nbsp;
+                    <input type="checkbox" name="extra2">Navegador
+                </p>
+            </fieldset>
+        <p>
+            Comentarios:<br>
+            <textarea cols="15" rows="5"></textarea>
+        </p>
+        <input type="submit" value="Send">
+        <input type="reset" value="Clear">
+    </fieldset>
+    </form>
+</body>
+</html>
